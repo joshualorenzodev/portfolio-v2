@@ -13,6 +13,7 @@ html {
     scroll-behavior: smooth;
     color: ${({ theme }) => theme.colors.white};
     font-family: ${({ theme }) => theme.fonts.primaryFont};
+    font-size: 12px;
 }
 
 a {
