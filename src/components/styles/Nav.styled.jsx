@@ -1,4 +1,19 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
+
+const navItemFade = keyframes`
+  from{
+    opacity: 0;
+    transform: translate(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+`;
+
+const navItemAnimation = ({ index }) => css`
+  animation: ${navItemFade} 0.5s ease forwards ${index / 7 + 0.2}s;
+`;
 
 export const Nav = styled.nav`
   height: 80px;
@@ -98,17 +113,19 @@ export const NavList = styled.ul`
     z-index: 998;
   }
   transition: ${({ theme }) => theme.transitions.hamburger};
-
-  li {
-    margin-right: 15px;
-  }
 `;
 
 export const NavItemStyled = styled.li`
   margin: 0.2rem 0.7rem;
 
   &:last-child {
-    margin-right: 0;
+    margin-right: 0px;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    opacity: 0;
+    margin: 1.2rem 0;
+    ${({ menuOpen }) => (menuOpen ? navItemAnimation : null)}
   }
 `;
 
