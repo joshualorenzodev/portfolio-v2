@@ -97,7 +97,7 @@ export const NavList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 14px;
+  font-size: 25px;
   flex-wrap: wrap;
 
   @media ${({ theme }) => theme.breakpoints.md} {
@@ -147,5 +147,44 @@ export const NavLink = styled.a`
     &::after {
       width: 100%;
     }
+  }
+`;
+
+export const Profile = styled.div`
+  display: none;
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      height: 15rem;
+      width: auto;
+      border-radius: 50%;
+      display: block;
+      margin: 2rem 0;
+    }
+
+    span {
+      /* margin: 2rem 0; */
+      font-weight: 900;
+    }
+  }
+`;
+
+export const SocialIcons = styled.div`
+  display: none;
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  a {
+    margin: 0 0.5rem;
+    font-size: 2rem;
   }
 `;
