@@ -16,10 +16,6 @@ html {
     font-size: 12px;
 }
 
-body {
-    height: 200vh;
-}
-
 a {
     text-decoration: none;
     color: ${({ theme }) => theme.colors.green};
