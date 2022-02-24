@@ -16,6 +16,10 @@ html {
     font-size: 12px;
 }
 
+body {
+    height: 200vh;
+}
+
 a {
     text-decoration: none;
     color: ${({ theme }) => theme.colors.green};
@@ -39,5 +43,23 @@ hr {
     
     border: 0;
     height: 1px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #7a8ba9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #31435f;
+    border-radius: 30px;
+
+    &:hover {
+        background: #202e46;
+    }
 }
 `;
